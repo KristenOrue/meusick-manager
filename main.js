@@ -2,6 +2,7 @@
 //      -manage your application lifecycle events
 //      -create and control browser windows       
 const { app, BrowserWindow } = require('electron')
+const S3 = require('aws-sdk/clients/s3')
 
 //Define a function that creates a new browser window with node integrations enabled
 //Loads index.html file into this window. 
