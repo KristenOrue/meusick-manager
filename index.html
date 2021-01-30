@@ -1,19 +1,97 @@
 <!-- The webpage you want to display once the application is initialized-->
 <!-- This web[age represents the "rendered process" -->
-
+<!-- Reference: https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_table_contextual&stacked=h -->
+<!-- Reference: https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_form_input&stacked=h -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <title>Meusick Manager</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body style="background: red;">
-    <h1>Hello World!</h1>
-    <p>
-        We are using node <script>document.write(process.versions.node)</script>,
-        Chrome <script>document.write(process.versions.chrome)</script>,
-        and Electron <script>document.write(process.versions.electron)</script>.
-    </p>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="#">Meusick Manager</a>
+        </div>
+        <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Albums</a></li>
+        <li><a href="#">Songs</a></li>
+        </ul>
+    </div>
+</nav>
+
+<header>
+    <img src="assets/images/logo.png" alt="logo" />
+    <h2>S3 Bucket Manager</h2>
+</header>
+
+<!-- Form for credentials:  -->
+<div class="container">
+    <h2>AWS credentials</h2>
+    <form>
+      <div class="form-group">
+        <label for="usr">User:</label>
+        <input type="text" class="form-control" id="usr">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Role:</label>
+        <input type="password" class="form-control" id="pwd">
+      </div>
+    </form>
+</div>
+
+<div class="container">
+  <p></p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Bucket Name</th>
+        <th>Album</th>
+        <th>Songs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Default</td>
+        <td>Defaultson</td>
+        <td>def@somemail.com</td>
+      </tr>      
+      <tr class="success">
+        <td>Success</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr class="danger">
+        <td>Danger</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr class="info">
+        <td>Info</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+      <tr class="warning">
+        <td>Warning</td>
+        <td>Refs</td>
+        <td>bo@example.com</td>
+      </tr>
+      <tr class="active">
+        <td>Active</td>
+        <td>Activeson</td>
+        <td>act@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 </body>
 </html>
